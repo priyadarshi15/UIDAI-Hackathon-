@@ -2,7 +2,7 @@ import pandas as pd
 import numpy as np
 
 
-filename = 'aadhaar_patna_data.csv' 
+filename = '19eac040-0b94-49fa-b239-4f2fd8677d53_9452cef086dca8f3efe1b80aecaaa491.csv' 
 df = pd.read_csv(filename)
 df['date'] = pd.to_datetime(df['date'], dayfirst=True)
 
@@ -35,5 +35,6 @@ def categorize(row):
 pincode_summary['Segment'] = pincode_summary.apply(categorize, axis=1)
 
 
-pincode_summary.to_csv('aadhaar_pulse_segments.csv', index=False)
+pincode_summary.to_csv('19eac040-0b94-49fa-b239-4f2fd8677d53_9452cef086dca8f3efe1b80aecaaa491.csv', index=False)
+
 print("\n--- SEGMENTATION COMPLETE: File saved as aadhaar_pulse_segments.csv ---")
